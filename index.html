@@ -3,217 +3,485 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shivsena Doctors Cell | BDS Wing Maharashtra</title>
+    <title>Shivsena Doctors Cell | BDS Wing Maharashtra State</title>
     <style>
         :root {
-            --primary-orange: #F37021; /* Traditional Saffron */
-            --dark-gray: #333333;
-            --light-bg: #f8f9fa;
+            --saffron: #F37021;
+            --saffron-dark: #D95D16;
+            --charcoal: #1A1A1A;
+            --slate: #2C3E50;
+            --light-bg: #F9FAFC;
+            --border-color: #E2E8F0;
         }
-        
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
         }
 
         body {
             background-color: var(--light-bg);
-            color: var(--dark-gray);
+            color: var(--charcoal);
             line-height: 1.6;
         }
 
-        /* Header & Navigation */
-        header {
-            background-color: var(--primary-orange);
-            color: white;
+        /* Top Institutional Banner */
+        .top-banner {
+            background: linear-gradient(135deg, #FFF5EF 0%, #FFFFFF 100%);
+            border-bottom: 3px solid var(--saffron);
+            padding: 20px 0;
             text-align: center;
-            padding: 30px 20px;
         }
 
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+        .mentor-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
         }
 
-        header h2 {
-            font-size: 1.2rem;
-            font-weight: normal;
+        .mentor-profile {
+            text-align: center;
+            width: 90px;
         }
 
+        .mentor-profile img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2.5px solid var(--saffron);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .mentor-profile p {
+            font-size: 0.75rem;
+            font-weight: bold;
+            color: var(--slate);
+            margin-top: 5px;
+        }
+
+        .brand-titles h1 {
+            font-size: 2.2rem;
+            color: var(--saffron);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 800;
+        }
+
+        .brand-titles h2 {
+            font-size: 1.15rem;
+            color: var(--slate);
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        /* Navigation Bar */
         nav {
-            background-color: var(--dark-gray);
-            text-align: center;
-            padding: 15px;
+            background-color: var(--charcoal);
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         nav a {
-            color: white;
+            color: #FFFFFF;
             text-decoration: none;
-            margin: 0 15px;
+            padding: 18px 25px;
             font-weight: 600;
-            text-transform: uppercase;
             font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
         }
 
         nav a:hover {
-            color: var(--primary-orange);
+            background-color: var(--saffron);
+            color: white;
         }
 
-        /* Main Container */
+        /* Main Structural Layout */
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 40px auto;
             padding: 0 20px;
         }
 
-        /* Section Styling */
         section {
-            background: white;
-            padding: 30px;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--primary-orange);
+            background: #FFFFFF;
+            padding: 40px;
+            margin-bottom: 35px;
+            border-radius: 12px;
+            border-left: 5px solid var(--saffron);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
         }
 
-        h3 {
-            color: var(--primary-orange);
-            margin-bottom: 15px;
-            font-size: 1.8rem;
-            border-bottom: 2px solid #eee;
+        .section-title {
+            color: var(--slate);
+            font-size: 1.75rem;
+            margin-bottom: 25px;
             padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+            position: relative;
         }
 
-        /* Leadership Grid */
+        /* Executive Leadership Grid */
+        .executive-tier {
+            margin-top: 30px;
+        }
+
+        .tier-title {
+            font-size: 1.2rem;
+            color: var(--saffron);
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
         .leadership-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-bottom: 35px;
         }
 
         .leader-card {
-            flex: 1;
-            min-width: 300px;
-            background: var(--light-bg);
-            padding: 20px;
-            border-radius: 8px;
+            background: #FFFBF9;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 25px 20px;
             text-align: center;
-            border: 1px solid #ddd;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .leader-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(243, 112, 33, 0.1);
+            border-color: var(--saffron);
+        }
+
+        .leader-card img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 3px solid white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .leader-card .placeholder-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--saffron) 0%, #FF9E67 100%);
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
         }
 
         .leader-card h4 {
-            font-size: 1.3rem;
-            color: var(--dark-gray);
-            margin-bottom: 5px;
+            font-size: 1.2rem;
+            color: var(--charcoal);
+            margin-bottom: 6px;
         }
 
-        .leader-card p.title {
-            color: var(--primary-orange);
-            font-weight: bold;
-            margin-bottom: 10px;
+        .leader-card .role {
+            color: var(--saffron);
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .leader-card p.college {
+        .leader-card .dept {
+            font-size: 0.85rem;
+            color: #718096;
+            font-weight: 500;
+        }
+
+        /* Functionality: Grievance Form Styling */
+        .grievance-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .grievance-container { grid-template-columns: 1fr; }
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
             font-size: 0.9rem;
-            color: #666;
+            color: var(--slate);
         }
 
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            background: var(--primary-orange);
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            background-color: #FAFAFA;
+            font-size: 0.95rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--saffron);
+            background-color: #FFFFFF;
+        }
+
+        .submit-btn {
+            background-color: var(--saffron);
             color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-top: 15px;
+            border: none;
+            padding: 14px 28px;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 6px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            width: 100%;
+            transition: background 0.3s ease;
         }
 
-        .btn:hover {
-            background: #d96015;
+        .submit-btn:hover {
+            background-color: var(--saffron-dark);
+        }
+
+        /* Quick Info Panels */
+        .info-card {
+            background: #F7FAFC;
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 4px solid var(--slate);
+            margin-bottom: 15px;
+        }
+
+        .info-card h5 {
+            color: var(--slate);
+            font-size: 1.05rem;
+            margin-bottom: 6px;
         }
 
         /* Footer */
         footer {
-            background-color: var(--dark-gray);
-            color: white;
+            background-color: var(--charcoal);
+            color: #A0AEC0;
             text-align: center;
-            padding: 20px;
-            margin-top: 50px;
+            padding: 30px 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+            border-top: 4px solid var(--saffron);
         }
+
+        footer p { margin-bottom: 5px; }
+        footer strong { color: white; }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Shivsena Doctors Cell</h1>
-        <h2>Medical Students Wing Maharashtra | BDS Wing</h2>
+    <!-- Top Institutional Banner with Layout Hierarchy -->
+    <header class="top-banner">
+        <div class="mentor-row">
+            <div class="mentor-profile">
+                <img src="1000657881.png" alt="Balasaheb Thackeray">
+                <p>वंदनीय बाळासाहेब ठाकरे</p>
+            </div>
+            <div class="mentor-profile">
+                <img src="1000657884.png" alt="Anand Dighe">
+                <p>धर्मवीर आनंद दिघे</p>
+            </div>
+            <div class="mentor-profile">
+                <img src="1000657854.png" alt="Eknath Shinde">
+                <p>मा. ना. एकनाथ शिंदे</p>
+            </div>
+            <div class="mentor-profile">
+                <img src="1000657855.png" alt="Dr. Shrikant Shinde">
+                <p>खा. डॉ. श्रीकांत शिंदे</p>
+            </div>
+        </div>
+        <div class="brand-titles">
+            <h1>शिवसेना डॉक्टर सेल</h1>
+            <h2>BDS Wing | Maharashtra State Medical Students Wing</h2>
+        </div>
     </header>
 
+    <!-- Sticky Navigation Bar -->
     <nav>
-        <a href="#about">About Us</a>
-        <a href="#leadership">Leadership</a>
-        <a href="#initiatives">Initiatives</a>
-        <a href="#contact">Contact & Join</a>
+        <div class="nav-container">
+            <a href="#about">Overview</a>
+            <a href="#leadership">Leadership Core</a>
+            <a href="#konkan-hub">Konkan Division Hub</a>
+            <a href="#grievance">Grievance Portal</a>
+        </div>
     </nav>
 
     <div class="container">
         
-        <!-- About Section -->
+        <!-- Overview Section -->
         <section id="about">
-            <h3>Empowering Dental Students Across Maharashtra</h3>
-            <p>The BDS Wing of the Shivsena Doctors Cell is dedicated to the welfare, rights, and academic excellence of dental undergraduate students, interns, and young professionals across the state. We serve as the bridge between students and administrative bodies to ensure a progressive and supportive environment for the future of dentistry.</p>
+            <h3 class="section-title">Official Objectives</h3>
+            <p style="font-size: 1.1rem; color: #4A5568;">
+                The BDS Wing of the Shivsena Doctors Cell stands as the premier structural body dedicated to protecting the rights, resolving localized operational concerns, and elevating the academic standard of dental undergraduate students across Maharashtra. Serving under a unified state vision, we systematically bridge communication loops between healthcare institutional heads, MUHS university systems, and the student body.
+            </p>
         </section>
 
-        <!-- Leadership Section -->
+        <!-- Leadership Section Structure mapping out the cells -->
         <section id="leadership">
-            <h3>State Leadership</h3>
-            <div class="leadership-grid">
-                
-                <div class="leader-card">
-                    <h4>Dr. Hrishikesh Subhash Jangale</h4>
-                    <p class="title">State President</p>
-                    <p class="college">Medical Students Wing & BDS Wing Maharashtra</p>
+            <h3 class="section-title">Core Administration Matrix</h3>
+            
+            <div class="executive-tier">
+                <h4 class="tier-title">Cell Command</h4>
+                <div class="leadership-grid">
+                    <div class="leader-card">
+                        <img src="1000657864.png" alt="Dr. Dhananjay Padwal">
+                        <h4>Dr. Dhananjay Govindrao Padwal</h4>
+                        <p class="role">प्रदेशप्रमुख</p>
+                        <p class="dept">शिवसेना डॉक्टर सेल, महाराष्ट्र प्रदेश</p>
+                    </div>
+                    <div class="leader-card">
+                        <img src="1000657863.png" alt="Dr. Gaurav Sonavane">
+                        <h4>Dr. Gaurav Sunil Sonavane</h4>
+                        <p class="role">उपाध्यक्ष व प्रदेशाध्यक्ष</p>
+                        <p class="dept">शिवसेना डॉक्टर सेल व मेडिकल विद्यार्थी विंग</p>
+                    </div>
                 </div>
+            </div>
 
-                <div class="leader-card">
-                    <h4>Prathamesh Sanjay Salunke</h4>
-                    <p class="title">State Vice President & Head of Konkan Division</p>
-                    <p class="college">Nair Hospital Dental College, Mumbai</p>
+            <div class="executive-tier">
+                <h4 class="tier-title">State Wing Executives</h4>
+                <div class="leadership-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                    <div class="leader-card" style="border-color: var(--saffron); background: #FFF9F5;">
+                        <div class="placeholder-avatar">PS</div>
+                        <h4>Prathamesh Sanjay Salunke</h4>
+                        <p class="role">डेंटल विद्यार्थी विंग प्रदेश उपाध्यक्ष<br>& कोकण विभाग प्रमुख</p>
+                        <p class="dept">नायर रुग्णालय दंत महाविद्यालय, मुंबई</p>
+                    </div>
                 </div>
-
             </div>
         </section>
 
-        <!-- Initiatives Section -->
-        <section id="initiatives">
-            <h3>Our Focus Areas</h3>
-            <ul>
-                <li><strong>Student Grievance Redressal:</strong> Active support for issues related to university exams, stipends, and campus infrastructure.</li>
-                <li><strong>Academic Growth:</strong> Organizing CDE programs, clinical hands-on workshops, and career guidance seminars.</li>
-                <li><strong>Community Health:</strong> Conducting statewide dental health checkup camps and rural awareness drives.</li>
-            </ul>
+        <!-- Functionality Area: Konkan Hub Details -->
+        <section id="konkan-hub">
+            <h3 class="section-title">Konkan Division Administrative Hub</h3>
+            <p style="margin-bottom: 20px; color: #4A5568;">
+                Monitoring and regulating student affairs across all private, semi-aided, and government municipal corporations dental colleges within the geographical jurisdiction of the Konkan division.
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px;">
+                <div class="info-card">
+                    <h5>Institutional Representation</h5>
+                    <p style="font-size: 0.85rem; color: #4A5568;">Establishing local structural student grievance desks inside every dental campus across the Konkan belt.</p>
+                </div>
+                <div class="info-card">
+                    <h5>Stipend & Infrastructure Tracking</h5>
+                    <p style="font-size: 0.85rem; color: #4A5568;">Ensuring systematic execution of operational mandates and fair payout patterns for interns.</p>
+                </div>
+            </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact">
-            <h3>Join the Movement</h3>
-            <p>Are you a dental student passionate about making a difference? Connect with your regional heads to become an active member of the BDS Wing.</p>
-            <a href="#" class="btn">Membership Form (Coming Soon)</a>
+        <!-- Interactive Grievance Redressal Mechanism -->
+        <section id="grievance">
+            <h3 class="section-title">Statewide Student Grievance Desk</h3>
+            <div class="grievance-container">
+                <div>
+                    <p style="color: #4A5568; margin-bottom: 15px;">
+                        BDS Undergraduate students, interns, or resident doctors facing infrastructural delays, university standard anomalies, or unethical institutional mandates anywhere across Maharashtra can securely report directly to the cell core hierarchy.
+                    </p>
+                    <div class="info-card" style="border-left-color: var(--saffron);">
+                        <h5>Processing Timeline</h5>
+                        <p style="font-size: 0.85rem; color: #4A5568;">Submitted issues are verified by regional committee panels within 48 business hours and routed to state leadership desks for systemic administrative execution.</p>
+                    </div>
+                </div>
+                <div>
+                    <form id="grievanceForm" onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <label for="studentName">Full Name</label>
+                            <input type="text" id="studentName" class="form-control" required placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="collegeName">Dental Institution</label>
+                            <input type="text" id="collegeName" class="form-control" required placeholder="e.g. Nair Hospital Dental College">
+                        </div>
+                        <div class="form-group">
+                            <label for="academicYear">Year of Study</label>
+                            <select id="academicYear" class="form-control" required>
+                                <option value="">Select current year</option>
+                                <option value="1st Year">1st Year BDS</option>
+                                <option value="2nd Year">2nd Year BDS</option>
+                                <option value="3rd Year">3rd Year BDS</option>
+                                <option value="4th Year">4th Year BDS</option>
+                                <option value="Internship">Internship Wing</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="issueCategory">Grievance Nature</label>
+                            <select id="issueCategory" class="form-control" required>
+                                <option value="">Select category</option>
+                                <option value="Academic/Exams">MUHS Academic / Evaluation Issues</option>
+                                <option value="Stipends">Stipend Irregularity / Payout Delays</option>
+                                <option value="Infrastructure">Clinical Infrastructure / Materials Deficit</option>
+                                <option value="Harassment">Institutional Harassment / Exploitation</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="issueDetails">Comprehensive Explanation</label>
+                            <textarea id="issueDetails" class="form-control" rows="4" required placeholder="Provide clear descriptions of facts, dates, and names if applicable..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">File Grievance Case</button>
+                    </form>
+                </div>
+            </div>
         </section>
 
     </div>
 
     <footer>
-        <p>&copy; 2026 Shivsena Doctors Cell - BDS Wing Maharashtra. All Rights Reserved.</p>
+        <p><strong>शिवसेना डॉक्टर सेल - डेंटल विद्यार्थी विंग (महाराष्ट्र राज्य)</strong></p>
+        <p>&copy; 2026 Official Administrative Portal. Formulated for Student Welfare & Healthcare Framework Advocacy.</p>
     </footer>
+
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('studentName').value;
+            const category = document.getElementById('issueCategory').value;
+            
+            alert(`Jai Maharashtra, ${name}.\nYour grievance related to "${category}" has been securely compiled. Our tracking unit will inspect your institutional parameters shortly.`);
+            document.getElementById('grievanceForm').reset();
+        }
+    </script>
 
 </body>
 </html>
